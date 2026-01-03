@@ -679,4 +679,24 @@ body {
     transform: none;
     box-shadow: none;
   }
+
+}
+
+@media (max-width: 768px) {
+
+  .review-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .review-item img {
+    width: 120px;
+    margin-bottom: 15px;
+  }
+
+  .review-item p {
+    text-align: justify;
+  }
+
 }

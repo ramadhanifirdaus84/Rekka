@@ -1,0 +1,682 @@
+/* === RESET & BODY === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1b335a;
+  font-family: Verdana, Arial, sans-serif;
+  color: #000;
+}
+
+/* === CONTAINER UTAMA === */
+.box {
+  margin: 0px auto;
+  background-color: #dddddd;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* === BANNER === */
+.banner img {
+  width: 100%;
+  display: block;
+}
+
+/* === MENU / NAVIGASI === */
+.menu {
+  background-color: #1c1c1c;
+  text-align: center;
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.menu a {
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: bold;
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ffd700;
+  transition: 0.3s;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu a:hover {
+  color: #ffd700;
+}
+
+/* === KONTEN === */
+.content {
+  padding: 30px;
+  background-color: #dddddd;
+}
+
+.content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content p {
+  text-align: justify;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+/* === GAMBAR KONTEN === */
+.gambar {
+  width: 300px;
+  float: left;
+  margin: 0 20px 15px 0;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.gambar:hover {
+  transform: scale(1.05);
+}
+
+/* === FOOTER === */
+.footer {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+}
+
+/* Navigasi Artikel (Sebelum / Lanjut) */
+.nav-artikel.satu-tombol {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+
+/* === ARTIKEL 2 & 3 SUPPORT === */
+
+/* Clear float */
+.clear {
+  clear: both;
+}
+
+/* Gambar kanan */
+.gambar.kanan {
+  float: right;
+  margin: 0 0 15px 20px;
+}
+
+/* Sub Judul */
+.content h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #1b335a;
+}
+
+/* List Manfaat & Teknik */
+.list-manfaat {
+  margin-left: 25px;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.list-manfaat li {
+  margin-bottom: 6px;
+}
+
+/* Navigasi Artikel (Sebelum / Lanjut) */
+.nav-artikel {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.btn-nav {
+  background-color: #1b335a;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-nav:hover {
+  background-color: #ffd700;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Section spacing */
+.content section {
+  margin-bottom: 35px;
+}
+
+/* Responsif */
+@media (max-width: 1220px) {
+  .box {
+    width: 95%;
+  }
+
+  .gambar,
+  .gambar.kanan {
+    float: none;
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .nav-artikel {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+}
+
+/* === GALLERY === */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.item {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+}
+
+.item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.item p {
+  text-align: center;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+/* === REVIEW === */
+
+/* Judul halaman review */
+.content h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1b335a;
+}
+
+/* Sub judul (Lini Gunpla / Series Gundam) */
+.content h3 {
+  margin: 25px 0 15px;
+  color: #142647;
+  border-left: 6px solid #1b335a;
+  padding-left: 10px;
+}
+
+/* Garis pemisah */
+.content hr {
+  margin: 30px 0;
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #1b335a, transparent);
+}
+
+/* Item review */
+.review-item {
+  display: flex;
+  gap: 20px;
+  background-color: #f4f4f4;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  align-items: center;
+  transition: 0.3s;
+}
+
+/* Hover efek */
+.review-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+/* Gambar review */
+.review-item img {
+  width: 130px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+/* Judul tiap review */
+.review-item h4 {
+  margin-bottom: 6px;
+  color: #1b335a;
+}
+
+/* Paragraf review */
+.review-item p {
+  line-height: 1.6;
+  margin-bottom: 6px;
+  text-align: justify;
+}
+
+/* Nilai rating */
+.review-item strong {
+  color: #b8860b;
+  font-size: 14px;
+}
+
+/* === CONTACT ME === */
+/* === CONTACT ME BOX PUTIH === */
+.contact-form {
+  background-color: #ffffff;
+  padding: 30px 35px;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  max-width: 750px;
+  margin: 0 auto 40px;
+}
+
+/* Label */
+.contact-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #1b335a;
+}
+
+/* Input, Select, Textarea */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+/* Fokus */
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #1b335a;
+}
+
+/* Radio & Checkbox */
+.radio-group,
+.checkbox-group {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+/* Tombol Form */
+.form-button {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.form-button button {
+  padding: 10px 25px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #1b335a;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.form-button button:hover {
+  background-color: #ffd700;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.form-button .reset {
+  background-color: #777;
+}
+
+.form-button .reset:hover {
+  background-color: #555;
+}
+
+/* === ABOUT ME === */
+
+.about-box {
+  display: flex;
+  gap: 25px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  margin-bottom: 30px;
+}
+
+/* FOTO */
+.about-photo {
+  text-align: center;
+  width: 250px;
+}
+
+.about-photo img {
+  width: 200px;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-photo img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.about-photo p {
+  margin-top: 10px;
+  font-style: italic;
+  color: #333;
+}
+
+/* INFO */
+.about-info {
+  flex: 1;
+}
+
+.about-info p {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  color: #222;
+}
+
+.about-info b {
+  color: #1b335a;
+}
+
+.about-info a {
+  color: #1b335a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about-info a:hover {
+  text-decoration: underline;
+}
+
+/* DESKRIPSI */
+.about-desc {
+  margin-top: 25px;
+  text-align: justify;
+  line-height: 1.7;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* === SECTION TAMBAHAN === */
+
+.about-section {
+  margin-top: 30px;
+  background-color: #ffffff;
+  padding: 20px 25px;
+  border-radius: 15px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.about-section h3 {
+  margin-bottom: 15px;
+  color: #1b335a;
+  border-bottom: 2px solid #1b335a;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* SKILL */
+.skill-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skill-list li {
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  background-color: #f4f6fa;
+  border-left: 5px solid #1b335a;
+  border-radius: 8px;
+}
+
+/* TIMELINE */
+.timeline {
+  list-style: none;
+  padding-left: 0;
+}
+
+.timeline li {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background-color: #f4f6fa;
+  border-left: 5px solid #1b335a;
+  border-radius: 8px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .box {
+    width: 95%;
+  }
+
+  .menu a {
+    display: inline-block;
+    margin: 8px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
+
+/* === ANIMASI === */
+
+/* GLOBAL TRANSISI */
+* {
+  scroll-behavior: smooth;
+}
+
+/* BANNER */
+
+.banner img {
+  animation: bannerFade 1.2s ease;
+}
+
+@keyframes bannerFade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MENU */
+
+.menu {
+  animation: slideDown 0.8s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CONTENT MASUK BERTAHAP */
+
+.content {
+  animation: fadeUp 0.9s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Elemen content muncul satu-satu */
+.content > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: contentStep 0.8s ease forwards;
+}
+
+.content > *:nth-child(1) { animation-delay: 0.1s; }
+.content > *:nth-child(2) { animation-delay: 0.2s; }
+.content > *:nth-child(3) { animation-delay: 0.3s; }
+.content > *:nth-child(4) { animation-delay: 0.4s; }
+.content > *:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes contentStep {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* REVIEW / CARD */
+
+.review-item {
+  animation: cardFade 0.7s ease both;
+}
+
+.review-item:nth-child(1) { animation-delay: 0.1s; }
+.review-item:nth-child(2) { animation-delay: 0.2s; }
+.review-item:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes cardFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.review-item:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(27,51,90,0.3);
+}
+
+/* GAMBAR */
+
+.gambar,
+.review-item img,
+.about-photo img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gambar:hover,
+.review-item img:hover,
+.about-photo img:hover {
+  transform: scale(1.08) rotate(1deg);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* TOMBOL */
+
+.btn-nav,
+.form-button button {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-nav::after,
+.form-button button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.25);
+  transform: skewX(-25deg);
+}
+
+.btn-nav:hover::after,
+.form-button button:hover::after {
+  animation: shine 0.7s;
+}
+
+@keyframes shine {
+  to {
+    left: 120%;
+  }
+}
+
+/* MOBILE OPTIMIZATION */
+
+@media (max-width: 768px) {
+  .banner img,
+  .menu,
+  .content,
+  .review-item {
+    animation-duration: 0.5s;
+  }
+
+  .review-item:hover,
+  .gambar:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}

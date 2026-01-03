@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me | Model Plastik</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+   <!-- CSS External -->
+  <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+<div class="box">
+
+  <!-- BANNER -->
+  <header class="banner">
+    <img src="Gambar/Type8.jpeg" alt="Banner">
+  </header>
+
+  <!-- MENU -->
+  <nav class="menu">
+    <a href="index.html">Home</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="Review.html">Review</a>
+    <a href="Kontak Saya.html">Contact Me</a>
+    <a href="Tentang Saya.html">About Me</a>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="content">
+
+    <h2>Contact Me</h2>
+
+    <p style="text-align:center; margin-bottom:25px;">
+      Punya pertanyaan, saran, atau ingin berbagi pendapat seputar  
+      <b>Gunpla</b> dan <b>Series Gundam</b>?  
+      Silakan hubungi saya melalui formulir di bawah ini.
+    </p>
+
+    <!-- FORM -->
+    <form class="contact-form">
+
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" placeholder="Masukkan nama Anda" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Masukkan email Anda" required>
+
+      <label for="kota">Kota</label>
+      <select id="kota" required>
+        <option value="">-- Pilih Kota --</option>
+        <option>Tangerang</option>
+        <option>Cikokol</option>
+        <option>Cilegon</option>
+        <option>Cikampek</option>
+      </select>
+
+      <label>Jenis Kelamin</label>
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="jk" required>
+          Laki-laki
+        </label>
+        <label>
+          <input type="radio" name="jk">
+          Perempuan
+        </label>
+      </div>
+
+      <label>Hobi</label>
+      <div class="checkbox-group">
+        <label>
+          <input type="checkbox">
+          Sepeda
+        </label>
+        <label>
+          <input type="checkbox">
+          Badminton
+        </label>
+        <label>
+          <input type="checkbox">
+          Builder
+        </label>
+      </div>
+
+      <label for="pesan">Pesan</label>
+      <textarea id="pesan" rows="4" placeholder="Tulis pesan Anda..." required></textarea>
+
+      <!-- TOMBOL -->
+      <div class="form-button">
+        <button type="submit">Kirim Pesan</button>
+        <button type="reset" class="reset">Batal</button>
+      </div>
+
+    </form>
+
+    <!-- INFO TAMBAHAN -->
+    <div class="about-desc">
+      <h3>Kontak Alternatif</h3>
+      <p>
+        Jika tidak sempat mengisi formulir, Anda juga dapat menghubungi saya melalui:
+      </p>
+      <ul style="margin-left:20px;">
+        <li>Email: <b>ramadhanifirdaus84@gmail.com</b></li>
+        <li>Instagram: <b>@ramadhanifirdaus</b></li>
+        <li>Hobi: Gunpla Builder & Gundam Reviewer</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p id="jam"></p>
+    <p>
+      &copy; Ramadhani Firdaus |
+      251011700900 |
+      01SIFP013 |
+      2026
+    </p>
+  </footer>
+
+</div>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
